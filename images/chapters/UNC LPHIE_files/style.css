@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+
+:root{
+    --light-blue: #54c6ff;
+}
+
+*{
+    font-family: 'Cinzel', serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--light-blue);
+    color:#fff;    
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 0 7%;
+    padding-top: 12%;
+}
+
+header{
+    position:fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+    width: 100%;
+}
+
+header .heading{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:black;
+    cursor: pointer;
+    margin: 1rem;
+    display: none;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background:var(--light-blue);
+    padding: 1rem;
+}
+
+header .navbar ul li{
+    margin: 0 1.5rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color:black;
+}
+
+header .navbar ul li a:hover{
+    color:#fff
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+/* start of home section */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background:url(../pictures/background.jpg) no-repeat;
+    background-size: initial;
+    background-position: unset;
+    background-attachment: fixed;
+}
+
+.logo {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+img {
+    width: auto;
+    max-height: 100%;
+    margin-bottom: 7rem;
+}
+
+.button {
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.click {
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 60px;
+}
+  
+/* end of home section */
+
+/* start of about section */
+
+.about{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background:rgb(0, 140, 215) no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.a-pic{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.about h1{
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.about .letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    margin-top: 5rem;
+}
+
+.about .auto-type{
+    margin-left: 2rem;
+}
+
+/* end of about section */
+
+/* start of active house section */
+
+.active-house{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:aliceblue no-repeat;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.container-ah{
+   margin: 20px 40px;
+   color: black;
+   padding: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: wrap;
+   max-width: 750px;
+}
+
+.profiles{
+    border: 2px solid rgb(0, 140, 215);
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    margin-bottom: 10rem;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate{
+    0% {
+    transform: perspective(1000px) rotateY(-30deg);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateY(30deg)
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(-30deg)
+    }
+}
+
+.profile{
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.profile .profile-img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    object-position:50% 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.profile:hover .profile-img{
+    filter: grayscale(0);
+}
+
+.user-name{
+    margin-top: -60px;
+    font-size: large;
+}
+
+.profile h5{
+    font-size: small;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: black;
+}
+
+/* end of active house section */
+
+/* start of resources */
+
+.resources{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:white no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resources .rstatement2{
+    margin-top: -7rem;
+}
+
+.resources h2{
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+/* end of resources */
+
+/* start of socials */
+
+.social{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:aliceblue no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.social-logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-logos .logo-img{
+    height: 300px;
+    width: 300px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    object-fit: contain;
+    transition: transform 1s;
+}
+
+.logo-img:hover {
+    transform: translateY(-30%);
+    transition-duration: 5s;
+}
+
+/* end of socials */
+
+/* start of chapter roster */
+
+.chap-ros{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:aliceblue no-repeat;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.container-cr{
+    margin: 20px 40px;
+    color: black;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 700px;
+ }
+
+.rosters{
+    text-align: center;
+    position: relative;
+}
+
+.roster .roster-img{
+    border: 3px solid rgb(0, 140, 215);
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    padding: 0;
+}
+
+.roster{
+    margin-bottom: 10rem;
+}
+
+.roster h2{
+    margin-top: -5rem;
+    font-size: 30px;
+    font-weight: bold
+}
+
+.roster h3{
+    font-size: 20px;
+}
+
+.roster h5{
+    font-size: 15px;
+}
+
+.roster .roster-gamma{
+    width: 50%;
+    height: 50%;
+    border: 3px solid rgb(0,140,215);
+}
+
+.roster .roster-mu{
+    width: 50%;
+    height: 50%;
+    border: 3px solid rgb(0, 140, 215);
+}
+
+.roster .roster-kappa{
+    width: 55%;
+    height: 55%;
+    border: 3px solid rgb(0, 140, 215);
+}
+
+.roster .roster-epsilon{
+    width: 60%;
+    height: 60%;
+    border: 3px solid rgb(0, 140, 215);
+}
+/* end of chapter roster */
+
+
+/* media queries */
+
+@media (max-width:800px){
+
+    html{
+        font-size: 45%;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 20px;
+    }
+
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: 6.2rem; right: -120%;
+        height: 100%;
+        width: 100%;
+        border-top: .2rem solid rgba(0,0,0,.3);
+    }
+
+    header .navbar ul{
+        height: 100%;
+        width: 100%;
+        flex-flow: column;
+        background:#fff;
+        padding-bottom: 15rem;
+    }
+
+    header .navbar ul li{
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    header .navbar ul li a{
+        font-size: 4rem;
+        color: rgb(0, 0, 0);
+        display: block;
+    }
+
+    header .navbar ul li a:hover{
+        color: var(--light-blue);
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        right: 0;
+    }
+
+    section{
+        padding-top: 2rem;
+    }
+
+    /* start of home section */
+
+    .home{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background:url(../pictures/background.jpg) no-repeat;
+        background-size: initial;
+        background-position: unset;
+        background-attachment: fixed;
+    }
+
+    .logo {
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: auto;
+        max-height: 100%;
+    }
+
+    .button {
+        font-size: 60px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-top: 10rem;
+    }
+    
+    .click{
+        visibility: hidden;
+    }
+    
+
+    /* end of home section */
+
+    /* start of about section */
+
+    .about{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background:rgb(0, 140, 215) no-repeat;
+        background-position: cover;
+        background-attachment: fixed;
+        margin-top: 5rem;
+    }
+
+    .a-pic{
+        display: flex;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about .letter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .about h1{
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+    }
+
+    .about .auto-type{
+        margin-left: 2rem;
+    }
+
+    /* end of about section */
+
+    /* start of active house section */
+
+    .active-house{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background:aliceblue no-repeat;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .container-ah{
+        margin: 20px 30px;
+        color: black;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 500px;
+    }
+
+    .profiles{
+        border: 1px solid rgb(0, 140, 215);
+        text-align: center;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 20s linear infinite;
+        margin-top: 13rem;
+    }
+
+    @keyframes rotate{
+        0% {
+        transform: perspective(1000px) rotateY(-30deg);
+        }
+
+        50% {
+            transform: perspective(1000px) rotateY(30deg)
+        }
+
+        100%{
+            transform: perspective(1000px) rotateY(-30deg)
+        }
+    }
+
+    .profile{
+        width: 110px;
+        height: 110px;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+    }
+
+    .profile .profile-img{
+        width:110px;
+        height:110px;
+        object-fit:cover;
+        object-position:50% 50%;
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: 400ms;
+    }
+
+    .profile:hover .profile-img{
+        filter: grayscale(0);
+    }
+
+    .user-name{
+        margin-top: -50px;
+        font-size: 10px;
+    }
+
+    .profile h5{
+        font-size: 5px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        color: black;
+    }
+
+    /* end of active house section */
+
+    /* start of resources */
+
+    .resources{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background:white no-repeat;
+        overflow: hidden;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .resources h2{
+        font-size: 10px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        margin-top: 10rem;
+        margin-left: 20px;
+    }
+
+    .resources .rstatement1{
+        width: 400px;
+        height: 500px;
+        margin: 50px 10px;
+    }
+
+    .resources .rstatement2{
+        width: 330px;
+        height: 160px;
+        margin: -50px 10px;
+    }
+
+    /* end of resources */
+
+    /* start of socials */
+
+    .social{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background:aliceblue no-repeat;
+        overflow: hidden;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .social-logos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-logos .logo-img{
+        height: 100px;
+        width: 100px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        object-fit: contain;
+        transition: transform 1s;
+    }
+
+    .logo-img:hover {
+        transform: translateY(-30%);
+        transition-duration: 5s;
+    }
+
+    /* end of socials */
+
+    /* start of chapter roster */
+
+    .chap-ros{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background:aliceblue no-repeat;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .container-cr{
+        margin: 80px 10px;
+        color: black;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 500px;
+    }
+
+    .rosters{
+        text-align: center;
+        position: relative;
+    }
+
+    .roster .roster-img{
+        border: 3px solid rgb(0, 140, 215);
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        padding: 0;
+    }
+
+    .roster{
+        margin-bottom: 5rem;
+    }
+
+    .roster h2{
+        font-size: 20px;
+        font-weight: bold
+    }
+
+    .roster h3{
+        font-size: 12px;
+    }
+
+    .roster h5{
+        font-size: 9px;
+    }
+
+    .roster .roster-gamma{
+        width: 50%;
+        height: 50%;
+        border: 3px solid rgb(0,140,215);
+    }
+
+    .roster .roster-mu{
+        width: 50%;
+        height: 50%;
+        border: 3px solid rgb(0, 140, 215);
+    }
+
+    .roster .roster-kappa{
+        width: 75%;
+        height: 75%;
+        border: 3px solid rgb(0, 140, 215);
+    }
+
+    .roster .roster-epsilon{
+        width: 60%;
+        height: 60%;
+        border: 3px solid rgb(0, 140, 215);
+    }
+    /* end of chapter roster */
+
+}
+
+
+
+
+
+
