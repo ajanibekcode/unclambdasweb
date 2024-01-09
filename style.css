@@ -6,14 +6,14 @@
 }
 
 html {
-  background-color: #f2f2f2;
+  background-color: #919090;
 
 }
 
 body {
   font-family: Arial, sans-serif;
   
-  background: linear-gradient(to bottom, #1d53d2d4, #83b2ec85), url(images/homepage/background.jpg) no-repeat scroll center top transparent;
+  background: linear-gradient(to bottom, #101215d4, #6e717685), url("https://media.istockphoto.com/id/587513486/photo/background-of-abstract-grey-color-smoke.jpg?s=612x612&w=0&k=20&c=4RJgP4eV1Cx89HX3YZfh7Hlo0SzDoyGsPEym_Gh8mB0=") no-repeat scroll center top transparent;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-size: 100% auto; */
@@ -23,7 +23,7 @@ body {
 
 header {
   /* background: linear-gradient(to left, rgb(91, 92, 92), rgb(63, 63, 113) 150%); */
-  background: rgb(26, 27, 60);
+  background: rgb(30, 30, 33);
   color: #fff;
   position: sticky;
 
@@ -31,7 +31,7 @@ header {
   padding: 1.5vh 0;
   width: 100%;
   height: auto;
-  border-bottom: 2px solid rgb(127, 117, 117);
+  border-bottom: 2px solid rgb(40, 36, 36);
   z-index: 999;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
@@ -51,15 +51,22 @@ nav {
 .navbar {
   display: flex;
   justify-content: space-between;
-
 }
 
 #navbar__logo:hover {
   transition: all 0.2s ease-in;
-  text-shadow: 1px 1px 10px rgba(164, 158, 158, 0.753);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.753);
 }
 
-.logo {
+ .logo img {
+  margin-left: 20px;
+  max-height: 8vh;
+  height: auto;
+  width: auto;
+  max-width: 5vh;
+}
+
+/* .logo {
   background-image: linear-gradient(to top, rgb(129, 175, 255), rgb(227, 230, 249) 100%);
 
   -webkit-background-clip: text;
@@ -74,10 +81,10 @@ nav {
   font-size: 1.2em;
   /* border: 5px solid white; */
   /* flex-basis: 1; */
-  font-weight: 600;
+  /* font-weight: 600; } */
 
   /* order: 1; */
-}
+
 .navcontainer {
 display: flex;
 
@@ -154,13 +161,13 @@ display: flex;
   /* flex-direction: column; */
   /* justify-content: space-around; */
   margin-top: 50px;
-}
+}  
 
 
 .left {
 /* width: 50%; */
 
-text-shadow: 0px 0px 20px rgb(154, 235, 253);
+text-shadow: 0px 0px 20px rgba(11, 75, 237);
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
@@ -192,7 +199,7 @@ width: 10%; */
   font-size: 3vmin;
   letter-spacing: 2vmin;
   margin-right: -2vmin;
-  text-shadow: 0px 0px 7px rgb(154, 235, 253);
+  text-shadow: 0px 0px 7px rgb(11, 75, 237);
 }
 
 #lphie {
@@ -435,7 +442,7 @@ footer{
   border-top: 1px solid rgb(178, 178, 178);
   color: white;
   text-align:center;
-  background-color: rgb(26, 27, 60);
+  background-color: rgb(30, 30, 33);
   padding: 15px 15px;
   /* margin: 10px; */
   font-family:'Arial Narrow', Arial, sans-serif;
@@ -529,6 +536,7 @@ footer{
 
 .fullnav {
   position: sticky;
+
   /* border: none; */
 }
 .title-container {
@@ -545,7 +553,6 @@ footer{
   /* background: linear-gradient(to bottom, rgb(26, 27, 60),rgba(26, 27, 73, 0.916), rgb(41, 53, 141), rgb(78, 99, 193)); */
   text-shadow: 0px 0px 15px rgba(154, 235, 253, 0.821);
   
-  /* background: rgb(26, 27, 60); */
     
 }
 
@@ -571,11 +578,12 @@ footer{
   text-align: center;
   align-items: center;
   border-bottom: 2px solid rgb(127, 117, 117);
+  background-color: #191818;
 }
 
 .intro-text {
   text-align: center;
-  text-shadow: 0px 0px 15px rgb(137, 220, 239);
+  text-shadow: 0px 0px 15px rgba(11, 75, 237);
   color: white;
   display: flex;
   flex-direction: column;
@@ -608,7 +616,7 @@ footer{
 
   background-color: #f2f2f2;
 
-  color: #333;
+  color: #454545;
   padding-top: 35px;
   /* border: 5px solid black; */
   border-bottom: 3px solid rgb(178, 178, 178);
@@ -952,7 +960,7 @@ label.fcf-label {
 .fcf-btn-primary:hover,
 .fcf-btn-primary:focus {
 border-color: rgba(230, 228, 228, 0.15);
-background-color: rgba(65, 105, 225, 0.783);
+background-color: rgba(45, 54, 80, 0.783);
 box-shadow: rgba(0, 0, 0, 0.249) 0 4px 12px;
 color: rgb(255, 255, 255);
 }
@@ -1594,6 +1602,7 @@ border-bottom: 1px solid black;
       justify-content: center;
       align-items: center;
       margin-right: 3%;
+
      
   
   
@@ -1660,7 +1669,7 @@ border-bottom: 1px solid black;
   
     .navigation.active {
       transition: all 0.8s ease;
-      
+      background-color: rgb(30, 30, 33);
     }
   
     .navigation li {
