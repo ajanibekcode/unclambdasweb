@@ -30,7 +30,7 @@ menu.addEventListener('click', mobileMenu);
 
 
 // About Us
-function showContent(sectionId) {
+function showContent(sectionId, button) {
   const textSection = document.getElementById('actual-content');
   let content = '';
 
@@ -47,5 +47,18 @@ function showContent(sectionId) {
   }
 
   textSection.innerHTML = content;
+
+  document.querySelectorAll('.section-toggle button').forEach(btn => {
+    btn.classList.remove('active-button');
+  });
+
+  button.classList.add('active-button');
 }
 
+// Ensure the first button is selected on page load
+window.onload = function () {
+  const firstButton = document.querySelector('.section-toggle button'); 
+  if (firstButton) {
+    showContent('who-we-are', firstButton);
+  }
+};

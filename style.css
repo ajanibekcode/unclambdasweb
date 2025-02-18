@@ -1134,6 +1134,14 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   .section-toggle button:hover {
     transform: translateY(-1px);
   }
+
+  .section-toggle button.active-button {
+    background-color: rgba(25,24,24,255);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgb(21, 18, 129) 0 2px 4px;
+    color: rgba(242, 242, 242, 255);
+    transform: translateY(-1px);
+  }
   
   /* .section-toggle button:active {
     background-color: #F0F0F1;
